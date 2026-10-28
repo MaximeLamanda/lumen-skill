@@ -152,11 +152,9 @@ Two kinds of evidence, and where they stop.
 
 ## Credits and licence
 
-Lumen is inspired by [Hairline](https://github.com/lucasmarkes/hairline) by Lucas Marques (MIT): a fixed engine, numbered rules with the way each goes wrong, a validator, a measured visual check, and a *create* and an *adopt* skill. That architecture, and some of the wording of the skills, is adapted from it; the style, the hover system, the settings and the code are Lumen's. See [NOTICE.md](NOTICE.md).
-
 The look takes its cue from a family of gradient, grained, single-ink geometric icon sets. Built with [Claude Code](https://claude.com/claude-code).
 
-[MIT](LICENSE) © 2026 Maxime Lamanda.
+[MIT](LICENSE) © 2026 Maxime Lamanda. A third-party licence notice is in [NOTICE.md](NOTICE.md).
 
 ---
 

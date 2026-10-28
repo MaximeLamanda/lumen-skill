@@ -1,8 +1,6 @@
 # Notice
 
-Lumen is inspired by [Hairline](https://github.com/lucasmarkes/hairline) by Lucas Marques, which is released under the MIT licence. The *architecture* of the skills is adapted from it: a fixed engine that pieces are written against, numbered rules with the way each one goes wrong, a validator that reads the text, a visual check that measures the drawing and produces a sheet to look at, and a pair of skills (create, and adopt a drawing). Some of the wording of the skills follows Hairline's. The code, the visual style, the hover system and the settings are Lumen's own.
-
-Hairline's licence, as required:
+Some of the wording of the skills is adapted from [Hairline](https://github.com/lucasmarkes/hairline), Copyright (c) 2026 Lucas Marques, which is released under the MIT licence. Its licence, as required:
 
 ```
 MIT License
