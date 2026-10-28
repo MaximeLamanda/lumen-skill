@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+# what the look and the sheets write when you run them from the repo
+lumen-*-look.png
+lumen-*-look.html
+lumen-*-zoom.png
+lumen-*-source.*
+set.html
+set.png
