@@ -9,7 +9,7 @@ You describe an illustration ("a charging station", "something for energy", a li
 - **One ink on pale paper.** Every shape is a gradient from the ink to almost nothing, then grained. No flat fills, and by default no lines.
 - **One SVG.** 200 × 200, transparent, a few KB. The recolour is one hex.
 - **Answers the hover.** On hover (or keyboard focus on the card that holds it) a piece does the verb of its idea (the plug docks, the cards scroll, the orbits turn) and comes back. Plain CSS, no script, still for people who ask for reduced motion.
-- **Two skills.** `/lumen-create <idea>` and `/lumen-adopt <file>`.
+- **Three skills.** `/lumen-create <idea>`, `/lumen-adopt <file>` and `/lumen-variants <idea>` (five compositions of one concept on a numbered sheet, you pick one, it is made properly).
 
 ## The twelve classic web-design subjects
 
@@ -105,6 +105,7 @@ git clone https://github.com/MaximeLamanda/lumen-skill.git
 cd lumen-skill
 ln -s "$PWD/skills/lumen-create" ~/.claude/skills/lumen-create
 ln -s "$PWD/skills/lumen-adopt"  ~/.claude/skills/lumen-adopt
+ln -s "$PWD/skills/lumen-variants" ~/.claude/skills/lumen-variants
 ```
 
 Then, in Claude Code:
@@ -113,6 +114,7 @@ Then, in Claude Code:
 /lumen-create a charging station for electric cars
 /lumen-create six illustrations: security, cloud, analytics, mail, payment, search
 /lumen-adopt icons/rocket.svg
+/lumen-variants a solar panel
 ```
 
 You can also run the tools yourself, from a working folder:
@@ -131,6 +133,7 @@ node tools/readme-images.mjs                                        # rebuild th
 | --- | --- |
 | `skills/lumen-create` | the skill: `SKILL.md`, the rules, the kit, `style.mjs`, the validator, the check, the examples, the tests |
 | `skills/lumen-adopt` | redraws an SVG or a picture you bring, keeping its parts and proportions and none of its colours |
+| `skills/lumen-variants` | five minimal compositions of one concept on a numbered sheet (`variants.mjs`, in `lumen-create`); you pick one and it is made properly |
 | `gallery/web-design` | the 12 subjects above: source, animated SVG, rest-only SVG |
 | `gallery/studies` | seven earlier studies (performance, flow, value, depth, deploy, matrix, security) |
 | `docs`, `tools` | the pictures of this README and the script that makes them |
@@ -162,7 +165,7 @@ The look takes its cue from a family of gradient, grained, single-ink geometric 
 
 **Lumen** est un skill pour Claude Code qui dessine des illustrations SVG dans un style précis : une seule encre bleue sur papier lavande, des dégradés qui se fondent dans le papier, un grain fin, pas de trait par défaut. Chaque pièce peut répondre au survol avec le verbe de son idée (la prise se branche, les cartes défilent, les orbites tournent), en CSS pur, sans script.
 
-- `/lumen-create <idée>` dessine, vérifie (validateur + mesures sur captures réelles) et livre un SVG ; `/lumen-adopt <fichier>` redessine un icône existant dans ce style.
+- `/lumen-create <idée>` dessine, vérifie (validateur + mesures sur captures réelles) et livre un SVG ; `/lumen-adopt <fichier>` redessine un icône existant dans ce style ; `/lumen-variants <idée>` dessine cinq compositions minimalistes d'un même concept sur une planche numérotée, tu choisis un numéro (avec un ajustement si tu veux), puis la pièce choisie est faite proprement.
 - Le moteur (`kit.mjs`) est séparé de ton goût (`style.mjs`) : traits, flèches, boucles et limites sont des **réglages**, pas des interdits. Le validateur distingue erreurs et avertissements.
 - Une pièce n'a qu'**une couleur** (un hex à remplacer). Pour qu'elle réponde au survol, le SVG doit être **inline** dans la page.
 - Testé sur un lot de 12 sujets classiques de web design : aucune erreur du validateur, mais 4 pièces ont dû être corrigées à l'œil, parce que les mesures ne voient pas une mauvaise lecture.

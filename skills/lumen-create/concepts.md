@@ -26,6 +26,21 @@ The reference sets lean on a handful of forms. A new piece usually borrows one.
 | **Facet** | Value, Dimension | worth, depth, nest | a polyhedron from `poly` facets or a `box` inside a `hull` |
 | **Object** | Message, Offer, Announcement, Report, Event | the thing itself | three to six primitives, one glyph at most |
 
+## Five compositions of one concept (the variants mode)
+
+When the person asks for variants, the concept stays the same and the **composition** changes. **Number 1 is the classic**: the composition you would have drawn without the mode, the one anyone pictures first (for a solar panel, six cells on a mast). It stays as it is, so the person can see what the other four deviate from, and it is not held to the minimal limit. The four others are sketches of 2 or 3 masses (4 at most) with one core, still, no hover. A variant that differs only by decoration is the same variant twice: a ribbon added, a gradient turned a few degrees, a part a tenth bigger do not count. Choose five from these axes, so that no two share both their core and their silhouette:
+
+| Axis | What changes | For a battery |
+| --- | --- | --- |
+| **Core** | which part gathers the ink: the top, the base, one side, the middle | the charge deep at the base / the terminal deep at the top |
+| **Masses** | how few say it | a body and its charge (2) / a body, a charge and a terminal (3) |
+| **View** | flat from the front, or solid (`box`, `cyl`) | a rounded rectangle / a cylinder |
+| **Frame** | the whole object, or the part that stands for it, cropped to fill the frame | the whole cell / only the charge and the terminal, big |
+| **Hollow** | a full mass, or a pale hollow mass (a ghost) with a deep core inside | a filled body / a hollow body round a deep charge |
+| **Repeat** | one, or the same part several times (a stack, a row, an offset copy) | one cell / three cells stacked, the top deepest |
+
+Say each in a line, as in step 1 (parts and core): "3. Three cells stacked, the top one deepest." The sheet (`variants.mjs`) notes two variants that have the same number of masses and fill the same box: change one of them.
+
 ## Three moves
 
 The kit has three moves, and one option that changes what they do: `fade`, the opacity a part goes to (so a part can dissolve as it moves). A verb is usually one of them, or two that agree.
