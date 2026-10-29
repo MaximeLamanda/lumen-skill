@@ -59,7 +59,7 @@ positionals.forEach((file, i) => {
   }
   const r = draw(source, { grain: true });
   if (r.stats.motions) console.log(`${String(n).padStart(2)} note  motion   ${r.stats.motions} move() call(s) left out of the sheet: the hover is designed for the chosen variant.`);
-  if (r.stats.parts > V.masses) console.log(`${String(n).padStart(2)} warn  parts    ${r.stats.parts} masses, over ${V.masses}: a variant is a minimal composition (see concepts.md, "Five compositions").`);
+  if (n > 1 && r.stats.parts > V.masses) console.log(`${String(n).padStart(2)} warn  parts    ${r.stats.parts} masses, over ${V.masses}: a variant is a minimal composition (see concepts.md, "Five compositions").`);
   cards.push({ n, file, svg: r.svg, parts: r.stats.parts, mass: r.stats.mass });
 });
 if (rejected) {

@@ -28,7 +28,7 @@ The reference sets lean on a handful of forms. A new piece usually borrows one.
 
 ## Five compositions of one concept (the variants mode)
 
-When the person asks for variants, the concept stays the same and the **composition** changes. Each variant is a sketch of 2 or 3 masses (4 at most) with one core, still, no hover. A variant that differs only by decoration is the same variant twice: a ribbon added, a gradient turned a few degrees, a part a tenth bigger do not count. Choose five from these axes, so that no two share both their core and their silhouette:
+When the person asks for variants, the concept stays the same and the **composition** changes. **Number 1 is the classic**: the composition you would have drawn without the mode, the one anyone pictures first (for a solar panel, six cells on a mast). It stays as it is, so the person can see what the other four deviate from, and it is not held to the minimal limit. The four others are sketches of 2 or 3 masses (4 at most) with one core, still, no hover. A variant that differs only by decoration is the same variant twice: a ribbon added, a gradient turned a few degrees, a part a tenth bigger do not count. Choose five from these axes, so that no two share both their core and their silhouette:
 
 | Axis | What changes | For a battery |
 | --- | --- | --- |
