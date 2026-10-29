@@ -1,7 +1,7 @@
 ---
 name: lumen-create
-description: Use when someone asks for a new Lumen illustration, icon or visual, still or animated, or runs /lumen-create with an idea. Draws one luminous geometric piece in a single electric-blue ink on pale lavender paper, with gradients that dissolve into the paper, fine grain and hairline accents, on a fixed kit, and hands it over as a self-contained SVG, optionally with a css hover animation in which the piece answers the pointer with the verb of its idea.
-argument-hint: "[idea]"
+description: Use when someone asks for a new Lumen illustration, icon or visual, still or animated, or runs /lumen-create with an idea; with "variantes" or "variants" it draws five minimal compositions of one concept on a numbered sheet, lets the person pick one, then makes that one properly. Draws one luminous geometric piece in a single electric-blue ink on pale lavender paper, with gradients that dissolve into the paper, fine grain and hairline accents, on a fixed kit, and hands it over as a self-contained SVG, optionally with a css hover animation in which the piece answers the pointer with the verb of its idea.
+argument-hint: "[idea] [variantes]"
 ---
 
 # Lumen: create a piece
@@ -37,6 +37,17 @@ When the brief is open (an idea, a feeling, "something for security"), wait for 
 With a source (step 0), every concept keeps the object and its parts: they differ in the core, in the direction of the fades, in what a ribbon or ghost says, and in the hover.
 
 One piece, one idea. A concept that needs a caption to be understood is not a concept yet.
+
+## 1b. Variants (only when asked)
+
+Skip this when the person did not ask for options. When they say "variantes", "variants", "explore", "plusieurs designs" or "5 options", or when `/lumen-variants` sends you here, do not draw one piece: draw several compositions of **one** concept, let them pick, then make the picked one properly. The count is `variants.count` in `style.mjs` (five).
+
+1. **One concept.** Fix it as in step 1: form or object, parts, core. When the brief is open, take the clearest concept, say which in one line, and go on: they asked for variants of a concept, not for a choice between concepts. Several different objects are a set, not variants.
+2. **Look at what exists first.** Read the person's folder (the working directory, and the gallery or set they name) for the same subject or a composition already drawn, and do not redraw it: that is how a "pulse" ended up redrawing a "target".
+3. **Draw the sketches.** `variants.count` pieces, each in its own file (`<concept>-1.js` to `-5.js`, each with its own `name`), in the shape of step 2 but as stills: no `move()`, and 2 or 3 masses (4 at most, `variants.masses`), one core. They differ by **composition**, from the axes in `concepts.md` ("Five compositions"), never by decoration: a ribbon added, a gradient turned a few degrees, a part a tenth bigger are the same variant twice. No two share both their core and their silhouette.
+4. **Make the sheet.** `node variants.mjs <concept>-1.js ... <concept>-5.js` validates each (an error stops it and says which number), then writes `lumen-variants.png`: the five numbered, with no names, each at 160px, 64px and as a value study. Fix errors, read warnings (`parts`, `alike`), and replace a variant that is too alike another rather than showing four. Judge the five at 64px (`look.md`, item 1). The full look is for the chosen one only; do not run it on the five.
+5. **Show the sheet and ask.** Attach `lumen-variants.png`, one line per number saying what the composition does (its core, its view, its scale), and ask for a **number**, or a number with an adjustment ("2 mais plus grand", "2 avec le cœur du 4"). With nobody to ask, take the one with the clearest core, say which and why, and go on.
+6. **Make the final piece.** The chosen variant, with its adjustment, becomes the piece: give it its real name, design its hover when the idea has a verb (step 2, point 5), then steps 3 and 4 as for any piece. The other four stay in the folder as drafts; say so, and do not hand them over as pieces. If the person answers that none fits, take what they say as a change (step 5) and draw the five again with it: the mode does not loop by itself.
 
 ## 2. Build
 
@@ -103,5 +114,9 @@ When the person asks for a change, edit only `<name>.js`, then run `look.mjs` ag
 | trusting frozen frames as proof that it answers | open the page, move a pointer over it and leave mid-way, or say you did not |
 | editing the kit to make something work | the piece is wrong; change the piece |
 | letting in a second idea | cut it: one piece, one idea |
+| five variants that differ only by decoration (a ribbon, a tilt, a size) | vary the composition: the core, the view, the frame, what is hollow, what is repeated (`concepts.md`) |
+| five different objects when variants were asked | one concept, five compositions; several objects are a set (step 1) |
+| designing a hover, or running the full look, on all five variants | the five are stills; the hover and the look are for the chosen one (step 1b) |
+| redrawing a subject the folder or the gallery already holds | read what exists first (step 1b, point 2) |
 | tracing a path from the source, or copying its colours | build the part from primitives with the proportions the card gives (`source.md`) |
 | keeping a part of the source that is decoration | drop it: two or three parts make the object |

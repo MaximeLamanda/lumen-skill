@@ -36,6 +36,10 @@ export const STYLE = {
     leave: 0.45, // seconds to come back
     ease: "cubic-bezier(.32,.72,0,1)",
   },
+  variants: {
+    count: 5, // how many compositions of one concept the variants mode draws, before the person picks one
+    masses: 4, // masses a variant should stay under: they are sketches, kept minimal (a warning, not a refusal)
+  },
 
   // ------------------------------------------------------------------ LIMITS
   limits: {
